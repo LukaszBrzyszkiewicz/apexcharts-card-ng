@@ -1,5 +1,5 @@
 {
-  "name": "ApexCharts-card Development",
+  "name": "ApexCharts-card-ng Development",
   "image": "ghcr.io/ludeeus/devcontainer/generic:stable",
   "context": "..",
   "remoteUser": "vscode",

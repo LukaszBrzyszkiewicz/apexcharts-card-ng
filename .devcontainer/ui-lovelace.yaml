@@ -21,7 +21,7 @@ views:
       - type: grid
         columns: 3
         cards:
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             apex_config:
               chart:
                 toolbar:
@@ -71,7 +71,7 @@ views:
             header:
               show: false
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             stacked: true
             # span:
             #   offset: -1d
@@ -91,7 +91,7 @@ views:
             header:
               floating: true
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             show:
               last_updated: true
             update_interval: 2s
@@ -136,7 +136,7 @@ views:
                 #     color: '#ff0000'
             graph_span: 10min
             cache: true
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 200h
             series:
               - entity: sensor.random_0_1000
@@ -145,7 +145,7 @@ views:
                 show:
                   extremas: true
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 1h
             header:
               title: Test Aggregate
@@ -227,7 +227,7 @@ views:
                   duration: 10min
                   func: diff
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 4h
             header:
               title: Test
@@ -253,7 +253,7 @@ views:
             entity: sensor.random_0_1000
             graph: line
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 6h
             header:
               show: false
@@ -280,7 +280,7 @@ views:
                 #   - value: 0
                 #     color: '#00ff00'
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: Start of day
@@ -297,7 +297,7 @@ views:
                   func: avg
                   fill: 'null'
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: Last 8h
@@ -345,7 +345,7 @@ views:
                 show:
                   datalabels: true
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 24h
             span:
               start: day
@@ -372,7 +372,7 @@ views:
                     return [moment().startOf('day').hours(hour).valueOf(), value];
                   })
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 8d
             span:
               start: day
@@ -409,7 +409,7 @@ views:
                     return [new Date(entry.datetime).getTime(), entry.temperature];
                   });
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 20min
             experimental:
               color_threshold: true
@@ -433,7 +433,7 @@ views:
                     color: red
                   - value: 1000
                     color: red
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: radialBar
@@ -449,7 +449,7 @@ views:
                 group_by:
                   func: avg
                   duration: 30min
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             chart_type: pie
             header:
               show: true
@@ -461,7 +461,7 @@ views:
                   datalabels: percent
 
               - entity: sensor.random_0_1000
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             chart_type: donut
             header:
               show: true
@@ -469,7 +469,7 @@ views:
             series:
               - entity: sensor.random0_100
               - entity: sensor.random_0_1000
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             chart_type: line
             graph_span: 15m
             header:
@@ -489,7 +489,7 @@ views:
               - entity: sensor.random_0_1000
                 show:
                   extremas: true
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: scatter
@@ -514,7 +514,7 @@ views:
                   func: sum
                   duration: 20min
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 1h
             update_delay: 5.5s
             # apex_config:
@@ -532,7 +532,7 @@ views:
                 x:
                   format: MMM
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: shouldn't extend to end with group_by
@@ -549,7 +549,7 @@ views:
                   duration: 1h
                   func: last
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             update_interval: 2s
             graph_span: 10s
             header:
@@ -560,25 +560,25 @@ views:
                 curve: stepline
                 extend_to: end
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             update_delay: 3s
             graph_span: 5min
             series:
               - entity: input_boolean.test_boolean
                 transform: "return x === 'on' ? 1 : 0;"
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             update_delay: 3s
             graph_span: 5min
             series:
               - entity: input_boolean.test_boolean
                 transform: "return x === 'on' ? 1 : 0;"
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             update_delay: 3s
             graph_span: 5min
             series:
               - entity: input_boolean.test_boolean
                 transform: "return x === 'on' ? 1 : 0;"
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 30min
             header:
               show: true
@@ -605,7 +605,7 @@ views:
                     color: green
                   - value: 25
                     color: orange
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 30min
             experimental:
               color_threshold: true
@@ -636,7 +636,7 @@ views:
                     color: green
                   - value: 25
                     color: orange
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 30min
             header:
               show: true
@@ -666,14 +666,14 @@ views:
                   - value: 25
                     color: orange
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             config_templates:
               - test
             series:
               - entity: sensor.temperature
               - entity: sensor.temperature
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             experimental:
               color_threshold: true
             series:
@@ -701,7 +701,7 @@ views:
                   });
                   return res;
 
-          - type: 'custom:apexcharts-card'
+          - type: 'custom:apexcharts-card-ng'
             experimental:
               color_threshold: true
             graph_span: 12h
@@ -741,7 +741,7 @@ views:
             apex_config:
               chart:
                 height: 250px
-          - type: 'custom:apexcharts-card'
+          - type: 'custom:apexcharts-card-ng'
             show:
               loading: false
             apex_config:
@@ -838,7 +838,7 @@ views:
                   return entity.attributes.forecast.map((entry) => {
                     return [new Date(entry.datetime).getTime(), entry.templow];
                   });
-          - type: 'custom:apexcharts-card'
+          - type: 'custom:apexcharts-card-ng'
             span:
               end: day
             hours_12: false
@@ -856,7 +856,7 @@ views:
                   func: sum
                   duration: 120min
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             experimental:
               color_threshold: true
               brush: true
@@ -887,7 +887,7 @@ views:
                 show:
                   in_brush: true
                   in_chart: false
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 1h
             all_series_config:
               type: column
@@ -903,7 +903,7 @@ views:
                   func: first
                   duration: 10min
                   start_with_last: true
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 1 week
             span:
               end: week
@@ -925,7 +925,7 @@ views:
                   duration: 10min
                   start_with_last: true
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 1h
             header:
               show: true
@@ -938,7 +938,7 @@ views:
                 offset: -1h
                 show:
                   offset_in_name: false
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: Irradiance
@@ -962,7 +962,7 @@ views:
                 show:
                   in_header: before_now
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: Shouldn't show a spike at the begining
@@ -978,7 +978,7 @@ views:
                   func: diff
                   duration: 10s
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: Significant Updates
@@ -986,7 +986,7 @@ views:
             series:
               - entity: sensor.counter_no_significant_update
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             header:
               show: true
               title: Significant Updates
@@ -1007,7 +1007,7 @@ views:
             series:
               - entity: sensor.random0_100
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 20min
             all_series_config:
               stroke_width: 2
@@ -1035,7 +1035,7 @@ views:
                 show: true
                 apex_config:
                   tickAmount: 6
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             show:
               last_updated: true
             graph_span: 20min
@@ -1063,7 +1063,7 @@ views:
               show: true
               show_states: true
               colorize_states: true
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             show:
               last_updated: true
             graph_span: 20min
@@ -1088,10 +1088,10 @@ views:
               show_states: true
               colorize_states: true
               disable_actions: true
-          - type: 'custom:apexcharts-card'
+          - type: 'custom:apexcharts-card-ng'
             header:
               show: true
-              title: ApexCharts-Card
+              title: ApexCharts-Card-NG
               show_states: true
             series:
               - entity: sensor.random0_100
@@ -1110,7 +1110,7 @@ views:
                   extremas: true
             yaxis:
               - id: temp
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             experimental:
               color_threshold: true
             graph_span: 12min
@@ -1162,7 +1162,7 @@ views:
       - type: grid
         columns: 3
         cards:
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 1h
             header:
               show: true
@@ -1182,7 +1182,7 @@ views:
                       command: toast
                       message: Hello, world!
 
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 1h
             header:
               show: true
@@ -1254,7 +1254,7 @@ views:
                 group_by:
                   duration: 2min
                   func: avg
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 1h
             span:
               start: hour
@@ -1286,7 +1286,7 @@ views:
                     [start.getTime(), 30],
                     [now_minus10.getTime(), 30]
                   ];
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 2h
             header:
               show: true
@@ -1298,7 +1298,7 @@ views:
               - entity: sensor.random0_100
                 time_delta: -1h
                 offset: -1h
-          - type: custom:apexcharts-card
+          - type: custom:apexcharts-card-ng
             graph_span: 2d
             span:
               start: day
@@ -1320,7 +1320,7 @@ views:
   - title: Long Term Stats
     panel: true
     cards:
-      - type: custom:apexcharts-card
+      - type: custom:apexcharts-card-ng
         cache: false
         graph_span: 1d
         header:

@@ -6,7 +6,15 @@
 [![Beta](https://img.shields.io/github/package-json/v/RomRider/apexcharts-card/dev?label=release%40dev)](https://github.com/RomRider/apexcharts-card/releases)
 [![Community Forum](https://img.shields.io/badge/community-forum-brightgreen.svg)](https://community.home-assistant.io/t/apexcharts-card-a-highly-customizable-graph-card/272877)
 
-# ApexCharts Card by [@RomRider](https://github.com/RomRider) <!-- omit in toc -->
+# ApexCharts-NG Card by [@LukaszBrzyszkiewicz](https://github.com/LukaszBrzyszkiewicz) <!-- omit in toc -->
+:warning: Adaptation to NG still on-going :warning:
+
+# Why ApexCharts-NG fork ? <!-- omit in toc -->
+It looks like original work by [@RomRider](https://github.com/RomRider) was stopped but new functionality and found errors should be fixed. Because of that I've created fork which will be updated.
+
+I've never developed TypeScript/JavaScript so I can fail on some solutions - but still this is mainly for my personal needs, but any commits are welcome.
+
+I need to adapt code and description to this local repo - so this is on-going - check new [Roadmap](#roadmap).
 
 ![Header](https://github.com/RomRider/apexcharts-card/raw/master/docs/Header.png)
 
@@ -904,15 +912,12 @@ series:
 
 Not ordered by priority:
 
-* [X] ~~Support more types of charts (pie, radial, polar area at least)~~
-* [X] ~~Support for `binary_sensors`~~
-* [X] ~~Support for aggregating data with exact boundaries (ex: aggregating data with `1h` could aggregate from `2:00:00am` to `2:59:59am` then `3:00:00am` to `3:59:59` exactly, etc...)~~
-* [X] ~~Display the graph from start of day, week, month, ... with support for "up to now" or until the "end of the period"~~
+* [ ] Update README to local repo
+* [ ] Update all forked files to be updated with NG solution
+* [ ] Support for range display
+* [ ] Fix memory issue
 * [ ] Support for any number of Y-axis
-* [ ] Support for logarithmic
-* [X] ~~Support for state mapping for non-numerical state sensors~~
-* [X] ~~Support for simple color threshold (easier to understand/write than the ones provided natively by ApexCharts)~~
-* [X] ~~Support for graph configuration templates à la [`button-card`](https://github.com/custom-cards/button-card/blob/master/README.md#configuration-templates)~~
+* [ ] Bump Apex version to latest one
 
 ## Examples
 
@@ -1058,7 +1063,7 @@ card:
 This is described in the ApexCharts.js documentation [here](https://apexcharts.com/docs/options/chart/height/) where you can find way more options.
 
 ```yaml
-type: custom:apexchart-card
+type: custom:apexchart-card-ng
 apex_config:
   chart:
     height: 250px

@@ -25,7 +25,7 @@ interface ActionHandlerElement extends HTMLElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'apexcharts-card-action-handler': ActionHandler;
+    'apexcharts-card-ng-action-handler': ActionHandler;
   }
 }
 
@@ -204,15 +204,15 @@ class ActionHandler extends HTMLElement implements ActionHandler {
   }
 }
 
-customElements.define('apexcharts-card-action-handler', ActionHandler);
+customElements.define('apexcharts-card-ng-action-handler', ActionHandler);
 
 const getActionHandler = (): ActionHandler => {
   const body = document.body;
-  if (body.querySelector('apexcharts-card-action-handler')) {
-    return body.querySelector('apexcharts-card-action-handler') as ActionHandler;
+  if (body.querySelector('apexcharts-card-ng-action-handler')) {
+    return body.querySelector('apexcharts-card-ng-action-handler') as ActionHandler;
   }
 
-  const actionhandler = document.createElement('apexcharts-card-action-handler');
+  const actionhandler = document.createElement('apexcharts-card-ng-action-handler');
   body.appendChild(actionhandler);
 
   return actionhandler as ActionHandler;

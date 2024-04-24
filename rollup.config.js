@@ -50,13 +50,13 @@ const plugins = [
 
 export default [
   {
-    input: 'src/apexcharts-card.ts',
+    input: 'src/apexcharts-card-ng.ts',
     output: {
       dir: './dist',
       format: 'es',
       sourcemap: dev ? true : false,
       globals: {
-        apexcharts: 'ApexCharts',
+        apexcharts: 'ApexCharts NG',
       },
     },
     plugins: [...plugins],

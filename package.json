@@ -1,8 +1,8 @@
 {
-  "name": "apexcharts-card",
-  "version": "2.0.4",
-  "description": "A Home Assistant Lovelace card using ApexCharts to render graphs",
-  "main": "src/apexcharts-card.ts",
+  "name": "apexcharts-card-ng",
+  "version": "2.0.4-0",
+  "description": "Next generation of Home Assistant Lovelace card using ApexCharts to render graphs",
+  "main": "src/apexcharts-card-ng.ts",
   "scripts": {
     "build": "npm run build:types-check && npm run lint && npm run rollup",
     "build:types-check": "ts-interface-builder src/types-config.ts",
@@ -13,21 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RomRider/apexcharts-card.git"
+    "url": "git+https://github.com/LukaszBrzyszkiewicz/apexcharts-card-ng.git"
   },
   "keywords": [
     "lovelace",
     "apexcharts",
+    "apexcharts-ng",
     "graphs",
     "charts",
     "home-assistant"
   ],
-  "author": "Jérôme Wiedemann",
+  "author": "Łukasz Brzyszkiewicz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RomRider/apexcharts-card/issues"
+    "url": "https://github.com/LukaszBrzyszkiewicz/apexcharts-card-ng/issues"
   },
-  "homepage": "https://github.com/RomRider/apexcharts-card#readme",
+  "homepage": "https://github.com/LukaszBrzyszkiewicz/apexcharts-card-ng#readme",
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
     "@material/mwc-ripple": "^0.25.3",

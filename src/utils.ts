@@ -26,7 +26,7 @@ export function getMilli(hours: number): number {
 
 export function log(message: unknown): void {
   // eslint-disable-next-line no-console
-  console.warn('apexcharts-card: ', message);
+  console.warn('apexcharts-card-ng: ', message);
 }
 
 /**
@@ -198,7 +198,7 @@ export function mergeConfigTemplates(ll: any, config: ChartCardExternalConfig): 
   const tpls = tpl && Array.isArray(tpl) ? tpl : [tpl];
   tpls?.forEach((template) => {
     if (!ll.config.apexcharts_card_templates?.[template])
-      throw new Error(`apexchart-card template '${template}' is missing from your config!`);
+      throw new Error(`apexchart-card-ng template '${template}' is missing from your config!`);
     const res = mergeConfigTemplates(ll, JSON.parse(JSON.stringify(ll.config.apexcharts_card_templates[template])));
     result = mergeDeepConfig(result, res);
   });

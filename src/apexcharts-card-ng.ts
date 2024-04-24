@@ -83,7 +83,7 @@ import { actionHandler } from './action-handler-directive';
 
 /* eslint no-console: 0 */
 console.info(
-  `%c APEXCHARTS-CARD %c v${pjson.version} `,
+  `%c APEXCHARTS-CARD-NG %c v${pjson.version} `,
   'color: orange; font-weight: bold; background: black',
   'color: white; font-weight: bold; background: dimgray',
 );
@@ -92,10 +92,10 @@ console.info(
 (globalThis as any).ApexCharts = ApexCharts;
 
 localForage.config({
-  name: 'apexchart-card',
+  name: 'apexchart-card-ng',
   version: 1.0,
   storeName: 'entity_history_cache',
-  description: 'ApexCharts-card uses caching for the entity history',
+  description: 'ApexCharts-card-NG uses caching for the entity history',
 });
 
 localForage
@@ -114,7 +114,7 @@ localForage
     console.warn('Purging has errored: ', err);
   });
 
-@customElement('apexcharts-card')
+@customElement('apexcharts-card-ng')
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 class ChartsCard extends LitElement {
   private _hass?: HomeAssistant;
@@ -488,7 +488,7 @@ class ChartsCard extends LitElement {
       }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
-      throw new Error(`/// apexcharts-card version ${pjson.version} /// ${e.message}`);
+      throw new Error(`/// apexcharts-card-ng version ${pjson.version} /// ${e.message}`);
     }
     // Full reset only happens in editor mode
     this._reset();
@@ -593,7 +593,7 @@ class ChartsCard extends LitElement {
     return html`
       <ha-card class="warning">
         <hui-warning>
-          <div style="font-weight: bold;">apexcharts-card</div>
+          <div style="font-weight: bold;">apexcharts-card-ng</div>
           ${this._config?.series.map((_, index) =>
             !this._entities[index]
               ? html` <div>Entity not available: ${this._config?.series[index].entity}</div> `
@@ -1603,7 +1603,7 @@ class ChartsCard extends LitElement {
 
     const foundEntities = _findEntities(hass, maxEntities, entities, entitiesFallback, includeDomains, entityFilter);
     const conf = {
-      header: { show: true, title: 'ApexCharts-Card', show_states: true, colorize_states: true },
+      header: { show: true, title: 'ApexCharts-Card-NG', show_states: true, colorize_states: true },
       series: [] as ChartCardSeriesExternalConfig[],
     };
     if (foundEntities[0]) {
@@ -1642,8 +1642,8 @@ return data.reverse();
 (window as any).customCards = (window as any).customCards || [];
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 (window as any).customCards.push({
-  type: 'apexcharts-card',
-  name: 'ApexCharts Card',
+  type: 'apexcharts-card-ng',
+  name: 'ApexCharts NG Card',
   preview: true,
-  description: 'A graph card based on ApexCharts',
+  description: 'A graph next-generation card based on ApexCharts',
 });

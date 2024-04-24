@@ -5,7 +5,7 @@ import * as t from "ts-interface-checker";
 // tslint:disable:object-literal-key-quotes
 
 export const ChartCardExternalConfig = t.iface([], {
-  "type": t.lit('custom:apexcharts-card'),
+  "type": t.lit('custom:apexcharts-card-ng'),
   "config_templates": t.opt(t.union(t.array("string"), "string")),
   "color_list": t.opt(t.array("string")),
   "locale": t.opt("string"),
